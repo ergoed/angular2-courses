@@ -1,7 +1,7 @@
 import * as chai from 'chai';
 var expect = chai.expect;
 
-describe.only('about let and const', () => {
+describe('about let and const', () => {
   it('1-should be only available in a if block scope', () => {
     var myVar: number = 1;
     let myLet: number = 2;
@@ -58,7 +58,7 @@ describe.only('about let and const', () => {
       error = true;
     }
 
-    expect(error).to.be._;
-    expect(myConstObject.key).to.equal( _ );
+    expect(error).to.be.false;
+    expect(myConstObject.key).to.equal( '0' );
   });
 });

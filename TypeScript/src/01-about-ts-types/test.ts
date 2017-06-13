@@ -34,7 +34,7 @@ describe.only('about ts types', () => {
 
   it('5-should type null and undefined', () => {
     var nullVar = null;
-    var undefinedVar: string = 1;
+    var undefinedVar;
     expect(nullVar).to.be.null;
     expect(undefinedVar).to.be.undefined;
   });
@@ -43,13 +43,13 @@ describe.only('about ts types', () => {
     function sayHello(name) {
       return 'Hello '.concat(name);
     }
-    expect(sayHello('TypeScript')).to.equal( _ );
+    expect(sayHello('TypeScript')).to.equal( "Hello TypeScript" );
   });
 
   it('7-should infer the type', () => {
     function add(a, b) {
       return a + b;
     }
-    expect(add(17, '25')).to.equal( _ );
+    expect(add(17, '25')).to.equal( "1725" );
   });
 });

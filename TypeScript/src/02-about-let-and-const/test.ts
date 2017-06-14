@@ -59,6 +59,6 @@ describe('about let and const', () => {
     }
 
     expect(error).to.be.false;
-    expect(myConstObject.key).to.equal( '0' );
+    expect(myConstObject.key).to.equal( 'value' );
   });
 });

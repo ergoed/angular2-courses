@@ -33,14 +33,14 @@ describe.only('about classes', () => {
       private firstName : string;
       private secondName : string;
 
-      get firstName() : string{
+      set firstName() : string{
         return this.firstName;
       }
-      get lastName() : string{
+      set lastName() : string{
         return this.secondName;
       }
 
-      set fullName() : string{
+      get fullName() : string{
         return  this.firstName + " " + this.secondName;
       }
     } // _
@@ -88,10 +88,7 @@ describe.only('about classes', () => {
     class Sidekick extends SuperHero{
         public master: string;
 
-        get SuperHero() : string{
-          return this.name;
-          this.master = this.name;
-        }
+
         public talk() {
           return `I fight against evil with ${this.ability} and my master is ${this.master}`;
         }
